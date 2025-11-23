@@ -1,0 +1,151 @@
+/* Переменные для тем */
+:root {
+  --bg-color: #f0f4f8;
+  --text-color: #111;
+  --card-bg: rgba(0, 0, 0, 0.05);
+  --highlight: #0077ff;
+  --footer-color: #666;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --highlight: #00c6ff;
+  --footer-color: #888;
+}
+
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--highlight);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: var(--highlight);
+  font-weight: 600;
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--highlight);
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+}
+
+.card-list li {
+  background: var(--card-bg);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease;
+}
+
+.card-list li:hover {
+  background: rgba(0, 119, 255, 0.1);
+}
+
+a {
+  color: var(--highlight);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hover-img {
+  width: 250px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--highlight);
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9em;
+  color: var(--footer-color);
+}
+
+/* Анимации */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+.delay-6 { animation-delay: 1.2s; }
